@@ -1,0 +1,19 @@
+for i in range(int(input())):
+	s1 = list(map(int,input().split()))
+	s2 = list(map(int,input().split()))
+	m = (s1[3]-s1[1])/(s1[2]-s1[0])
+	horizontal1,horizontal2 = 0,0
+
+	if s1[0] == s1[2]:
+		horizontal1 = 1
+	if s2[0] == s2[2]:
+		horizontal2 = 1
+	if not horizontal1^horizontal2:
+		
+	else:
+		
+	'''if ((s2[1]-s1[1])/(s2[0]-s1[0]) - m ) * ((s2[3]-s1[1])/(s2[2] - s1[0]) - m ) > 0:
+		print("no")
+	else:
+		print("yes")
+	'''

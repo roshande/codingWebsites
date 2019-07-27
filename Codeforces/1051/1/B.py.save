@@ -1,0 +1,9 @@
+def gcd(n1,n2):
+	if n1%n2 == 0:
+		return n2
+	elif 
+l,r = map(int,input().split())
+
+for num in range(l,r+1):
+	for num1 in range(num+1,r+1,2):
+		if gcd(

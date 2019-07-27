@@ -1,0 +1,28 @@
+for _ in range(int(input())):
+	pa = input()
+	lower = False
+	upper = False
+	digit = False
+	lower_pos,upper_pos,digit_pos = [],[],[]
+	for i in range(len(pa)):
+		if islower(pa[i]):
+			lower = True
+			lower_pos.append(i)
+		elif isupper(pa[i]):
+			upper = True
+			upper_pos.append(i)
+		elif isdigit(ch):
+			digit = True
+			digit_pos.append(i)
+	if lower and upper and digit:
+		print(pa)
+		continue
+	if not lower:
+		pa = pa.replace(pa[upper_pos[0]],pa[upper_pos[0]].lower())
+		if len(digit_pos) > len(upper_pos):
+			pa = pa.replace(pa[upper_pos[0]],pa[upper_pos[0]].upper())
+			pa = pa.replace(pa[digit_pos[0]],'c')
+	if not upper:
+		pa = pa.replace(pa[lower_pos[0]],pa[lower_pos[0]].upper())
+		if len(digit_pos) > len(lower_pos):
+			pa = pa.replace(pa[lower_pos[0]]
