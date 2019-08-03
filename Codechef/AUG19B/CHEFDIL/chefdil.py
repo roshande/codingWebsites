@@ -15,13 +15,12 @@ possibilities = {
     "111":True
 }
 def is_possible(S):
-    #print(S)
+    print(S)
+    if S.count("1") == 1:
+        return True
     val = possibilities.get(S)
     if val is not None:
         return val
-    #val = possibilities.get(reversed(S))
-    #if val is not None:
-    #    return val
     toggle = lambda x: '0' if x == '1' else '1'
     if S[0] == '1':
         new_s = toggle(S[1])+S[2:]
@@ -30,7 +29,7 @@ def is_possible(S):
         if fs:
             return True
     if S[-1] == '1':
-        new_s = S[:-1]+toggle(S[-2])
+        new_s = S[:-2]+toggle(S[-2])
         fs = is_possible(new_s)
         possibilities[new_s] = fs
         if fs:
